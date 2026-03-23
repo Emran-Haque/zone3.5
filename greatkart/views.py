@@ -2,9 +2,7 @@ from django.shortcuts import render
 from store.models import Product
 def home(request):
     products = Product.objects.all().filter(is_available=True)
-
+    print(products.values())
     return render(request, 'home.html', {'products' : products})
 
 
-def base(request):
-    return render(request, 'base.html')

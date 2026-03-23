@@ -22,7 +22,7 @@ from cart.views import _cart_id
 from cart.models import Cart, CartItem
 import requests
 # Create your views here.
-def register(request):
+def register(request): 
     if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
@@ -165,16 +165,18 @@ def activate(request, uidb64, token):
     return redirect('register')
 
 
-@login_required(login_url = 'login')
+@login_required(login_url='login')
 def dashboard(request):
-    orders = Order.objects.order_by('-created_at').filter(user_id=request.user.id, is_ordered=True)
+    # Get orders for the logged-in user
+    orders = Order.objects.filter(user_id=request.user.id, is_ordered=True).order_by('-created_at')
     orders_count = orders.count()
 
-    userprofile = UserProfile.objects.get(user_id=request.user.id)
+    # Fetch the user's profile, gracefully handling missing profile
+    userprofile = get_object_or_404(UserProfile, user_id=request.user.id)
+
     context = {
         'orders_count': orders_count,
         'userprofile': userprofile
-        
     }
     return render(request, 'accounts/dashboard.html', context)
 
@@ -199,7 +201,7 @@ def forgotPassword(request):
             send_email = EmailMessage(mail_subject, message, to=[to_email])
             send_email.send()
 
-            messages = success(request, 'Password reset email has been sent to your email address.')
+            messages.success(request, 'Password reset email has been sent to your email address.')
             return redirect('login')
 
         else:
@@ -258,11 +260,9 @@ def my_orders(request):
 
 
 def edit_profile(request):
-    print("1")
     print(UserProfile)
     # userprofile = UserProfile.objects.get(user=request.user)
     userprofile = get_object_or_404(UserProfile, user=request.user)
-    print("2")
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance=request.user)
         print("3")

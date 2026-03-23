@@ -29,7 +29,7 @@ def payments(request, total=0, quantity=0):
         for cart_item in cart_items:
             total += (cart_item.product.price * cart_item.quantity)
             quantity += cart_item.quantity
-        tax = (2 * total)/100
+        tax = (0 * total)/100
         grand_total = total + tax
 
         
@@ -57,12 +57,28 @@ def payments(request, total=0, quantity=0):
         # amount =( request.POST.get('amount')) * 100
 
         # create razorpay client key
-        key_secret = '0AkNO3ICSYifKlYHneC7tQsh'
-        key_id     = 'rzp_test_h8zTQEuvWqkm9b'
-        client = razorpay.Client(auth=('rzp_test_h8zTQEuvWqkm9b', '0AkNO3ICSYifKlYHneC7tQsh'))
-        # create order
-        response_payment = client.order.create(dict( amount = int(amount) * 100 ,
-        currency = 'INR'))
+        # key_secret = '0AkNO3ICSYifKlYHneC7tQsh'
+        # key_id     = 'rzp_test_h8zTQEuvWqkm9b'
+        # client = razorpay.Client(auth=('rzp_test_h8zTQEuvWqkm9b', '0AkNO3ICSYifKlYHneC7tQsh'))
+        # # create order
+        # response_payment = client.order.create(dict( amount = int(amount) * 100 ,
+        # currency = 'BDT'))
+        
+        response_payment = {
+            'id': 'order_9A33XWu170gUtm',
+            'entity': 'order',
+            'amount': 50000,
+            'amount_paid': 0,
+            'amount_due': 50000,
+            'currency': 'INR',
+            'receipt': 'order_rcptid_11',
+            'status': 'created',
+            'attempts': 0,
+            'notes': {
+                'note_key_1': 'Tea, Earl Grey, Hot',
+                'note_key_2': 'Make it so.'
+            }
+        }
 
       
 

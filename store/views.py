@@ -1,7 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect,get_object_or_404
 from .models import Product, ReviewRating,  ProductGallery
 from category.models import Category
-from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 
@@ -10,18 +9,6 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from cart.models import CartItem
 from cart.views import _cart_id
 from .forms import ReviewForm
-
-from django.shortcuts import render, get_object_or_404, redirect
-from .models import Product, ReviewRating
-from category.models import Category
-from cart.models import CartItem
-from django.db.models import Q
-
-from cart.views import _cart_id
-from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
-from django.http import HttpResponse
-from .forms import ReviewForm
-from django.contrib import messages
 from orders.models import OrderProduct
 
 

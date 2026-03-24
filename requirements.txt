@@ -12,4 +12,4 @@ django-cors-headers==3.10.0  # For handling CORS in Django
 django-filter==2.4.0  # For filtering in Django REST Framework
 djangorestframework-simplejwt==4.8.0  # For JWT authentication
 drf-yasg==1.20.0  # For API documentation with Swagger
-legacy-cgi==0.2.0  # For handling legacy CGI scripts if needed
+legacy-cgi==2.6.4  # For handling legacy CGI scripts if needed

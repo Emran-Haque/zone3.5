@@ -9,7 +9,6 @@ def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'greatkart.settings')
     port = os.getenv('PORT', 8000)  # Default to 8000 if PORT is not set
-    execute_from_command_line(['manage.py', 'runserver', f'0.0.0.0:{port}'])
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

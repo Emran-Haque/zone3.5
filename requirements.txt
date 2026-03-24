@@ -15,3 +15,4 @@ drf-yasg==1.20.0  # For API documentation with Swagger
 legacy-cgi==2.6.4  # For handling legacy CGI scripts if needed
 django-admin-thumbnails==1.0.0  # For generating thumbnails in Django admin
 django-storages==1.12.3
+setuptools==82.0.1  # For packaging and distribution

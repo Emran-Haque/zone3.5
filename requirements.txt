@@ -20,4 +20,3 @@ django-storages==1.12.3  # For handling file storage, e.g., with Amazon S3
 legacy-cgi==2.6.4  # For handling legacy CGI scripts if needed
 django-admin-thumbnails==1.0.0  # For generating thumbnails in Django admin
 django-storages==1.12.3
->>>>>>> 79bd54a4852fb43bec7289400570ced01e00a732

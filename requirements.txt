@@ -1,3 +1,15 @@
 Django==3.2.9
+Pillow==8.4.0
+psycopg2==2.9.1
 djangorestframework==3.12.4
-gunicorn==20.1.0  # For deploying the project
+gunicorn==20.1.0
+whitenoise==5.2.0
+django-cors-headers==3.7.0
+django-allauth==0.44.0
+celery==5.2.3
+django-debug-toolbar==3.2.1
+django-extensions==3.1.3
+django-redis==5.0.0
+bcrypt==3.2.0
+django-storages==1.11.1
+razorpay==2.4.0  # Razorpay for payment integration

@@ -16,3 +16,4 @@ django-admin-thumbnails==1.0.0  # For generating thumbnails in Django admin
 django-storages==1.12.3
 setuptools==82.0.1  # For packaging and distribution
 django-razorpay==1.1.6
+pillow==12.1.1  # For image processing

@@ -2,7 +2,6 @@ Django==3.2.9
 djangorestframework==3.12.4
 django-debug-toolbar==3.2.1
 django-extensions==3.1.3
-razorpay==1.1.6  # Razorpay for payment integration
 psycopg2-binary==2.9.3  # PostgreSQL database adapter
 gunicorn==20.1.0  # WSGI HTTP server for deployment
 celery==5.2.3  # Celery for asynchronous task processing

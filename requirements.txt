@@ -4,7 +4,6 @@ django-debug-toolbar==3.2.1
 django-extensions==3.1.3
 psycopg2-binary==2.9.3  # PostgreSQL database adapter
 gunicorn==25.1.0  # WSGI HTTP server for deployment
-django-celery==3.3.1  # Celery for asynchronous task processing
 redis==4.1.0  # Redis for Celery message broker
 flower==1.0.0  # Flower for monitoring Celery tasks
 python-dotenv==0.19.2  # For managing environment variables

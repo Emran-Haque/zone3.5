@@ -24,7 +24,7 @@ SECRET_KEY = '#k=o&lxlkbvwo-c4%v%d%8eur1h0(&-r!+hg)w@45z^da(v08a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['zone3dot5.onrender.com']
 
 
 # Application definition

@@ -57,6 +57,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'greatkart.urls'
 import os
+PORT = os.getenv("PORT", "8000")
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

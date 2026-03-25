@@ -29,11 +29,6 @@ CSRF_TRUSTED_ORIGINS = [
     'https://zone3dot5.onrender.com',
     'http://zone3dot5.onrender.com',
 ]
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 3379043af5a6de28297da3ebc127556087ce6402
 
 # Application definition
 
